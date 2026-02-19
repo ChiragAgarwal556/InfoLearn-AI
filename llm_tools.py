@@ -7,7 +7,7 @@ load_dotenv(override=True)
 
 # ===== LANGSMITH CONFIG =====
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+os.environ["LANGCHAIN_ENDPOINT"] = "your_api_key"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT", "Autonomous-Learning-Agent")
 
@@ -24,7 +24,7 @@ from langchain_tavily import TavilySearch
 llm = ChatGroq(
     model="llama-3.1-8b-instant",
     temperature=0.3,
-    api_key=os.getenv("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"),
+    api_key=os.getenv("your_api_key"),
 )
 
-search_tool = TavilySearch(k=3, api_key=os.getenv("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"))
+search_tool = TavilySearch(k=3, api_key=os.getenv("your_api_key"))
