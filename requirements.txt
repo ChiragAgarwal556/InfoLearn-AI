@@ -6,5 +6,6 @@ langgraph
 langsmith
 python-dotenv
 requests
-langchain_tavily
+langchain-tavily
+
 
