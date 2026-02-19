@@ -19,7 +19,7 @@ print("✅ PROJECT:", os.getenv("LANGCHAIN_PROJECT"))
 print("✅ KEY FOUND:", bool(os.getenv("LANGCHAIN_API_KEY")))
 
 from langchain_groq import ChatGroq
-from langchain_tavily import TavilySearch
+
 
 llm = ChatGroq(
     model="llama-3.1-8b-instant",
@@ -28,4 +28,5 @@ llm = ChatGroq(
 )
 
 search_tool = TavilySearch(k=3, api_key=os.getenv("your_api_key"))
+
 
