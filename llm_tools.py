@@ -7,7 +7,7 @@ load_dotenv(override=True)
 
 # ===== LANGSMITH CONFIG =====
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_ENDPOINT"] = "your_api_key"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT", "Autonomous-Learning-Agent")
 
@@ -28,3 +28,4 @@ llm = ChatGroq(
 )
 
 search_tool = TavilySearch(k=3, api_key=os.getenv("your_api_key"))
+
